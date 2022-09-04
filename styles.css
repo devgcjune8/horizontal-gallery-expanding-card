@@ -1,0 +1,76 @@
+@import url('http://fonts.cdnfonts.com/css/bravorg');
+
+* {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+body {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+overflow: hidden;
+margin:0 ;
+font-family: 'BravoRG', sans-serif;
+background: radial-gradient(rgb(14, 123, 143), rgb(0, 30, 128));
+user-select: none;
+}
+
+.container {
+display: flex;
+width: 50vw;
+}
+
+.root h1 {
+   color: white;
+   font-size: 3em; 
+}
+sup {
+    font-size: 0.5em;
+}
+
+.pic {
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 60vh;
+border-radius: 10px 5px 10px;
+color: rgb(255, 255, 255);
+cursor: pointer;
+margin: 2vw;
+flex: 0.5;
+position: relative;
+transition: flex 0.93s ease-in;
+}
+
+.pic h2 {
+font-size: 30px;
+position: absolute;
+bottom: 15px;
+left: 15px;
+margin: 0;
+opacity: 0;
+text-shadow: 0 0 2px rgb(0, 0, 0), 0 0 2px black, 0 0 2px black, 0 0 2px black;
+letter-spacing: 2px;
+}
+
+.pic.clicked {
+    flex:5;
+    border-radius: 50px 5px 50px;
+    background-position: center top;
+}
+.pic.clicked h2 {
+opacity:1;
+transition: opacity 0.5s ease-in 0.4s
+}
+
+@media (max-width: 500px) {
+    .container {
+    width: 100vw;
+    };
+    
+    .pic:nth-of-type(4),.pic:nth-of-type(5) {
+    display: none;
+    };
+}
